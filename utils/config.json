@@ -1,0 +1,9 @@
+{
+    "prefix": "!",
+    "defaultCooldown":"5",
+    "colors": {
+        "default": "FF0505",
+        "error": "FF4500"
+    },
+    "owner":"NONE!"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "djs-handler",
+  "version": "0.0.1",
+  "description": "A easy to use command/event handler for discord.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "BracketByte",
+  "license": "ISC",
+  "dependencies": {
+    "ascii-table": "^0.0.9",
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0"
+  }
+}
