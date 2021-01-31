@@ -15,7 +15,7 @@ with useful features.
 
 **2** set your prefix in `utils/config.json`
 
-**3** run `npm install` then `npm run start` in your terminal
+**3** run `npm install` then `npm run start` in your terminal id its your first time using the bot, if not, just run 'npm run start`
 
 ## HOW TO ADD NEW COMMANDS?
 
