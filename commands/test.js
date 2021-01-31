@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 module.exports = {
 	name: 'test',
 	description: 'Just a test command',

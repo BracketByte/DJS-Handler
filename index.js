@@ -1,13 +1,11 @@
 require('dotenv').config();
-
-const Discord = require('discord.js');
 const fs = require('fs');
 
-
+const Discord = require('discord.js');
 const client = new Discord.Client();
+
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
-client.cooldowns = new Discord.Collection();
 
 fs.readdir('./events/', (err, files) => {
 	const eventHandler = require('./handler/eventHandler.js');

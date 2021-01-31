@@ -1,7 +1,7 @@
-/* eslint-disable no-unused-vars */
 const Discord = require('discord.js');
-const { prefix, colors, owner } = require('./../utils/config.json');
+const { prefix, colors} = require('./../utils/config.json');
 const embedColor = colors.default;
+
 module.exports = {
 	name: 'help',
 	description: 'Get help on how to use the bot and the specific commands',
@@ -11,7 +11,6 @@ module.exports = {
 	usage: '[command name]',
 	execute: async (message, args, client) => {
 		const { commands } = message.client;
-
 
 		if (!args.length) {
 			const cmdHelpEmbed = new Discord.MessageEmbed()
@@ -30,7 +29,7 @@ module.exports = {
 		const name = args[0].toLowerCase();
 		const command =
 				commands.get(name) ||
-				commands.find((c) => c.aliases && c.aliases.includes(name));
+				commands.find((cmd) => cmd.aliases && cmd.aliases.includes(name));
 
 		if (!command) {
 			return message.reply('This command does not exist!');
