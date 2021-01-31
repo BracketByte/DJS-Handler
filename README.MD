@@ -5,7 +5,7 @@ with useful features.
 
 ## INFO
 
-**!** The command handler is based on the official discord.js command handler
+**!** The command handler used in this repository is based on the official discord.js command handler
 
 **!** Make sure that you have Node.js and NPM installed and up to to date on your system
 
