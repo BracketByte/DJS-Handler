@@ -11,11 +11,13 @@ with useful features.
 
 ## HOW DO I START THE BOT?
 
-**1** Create a new file in the root of the directory called `.env` and write in it `TOKEN=your_token_here`
+**1** Create a new file in the root of the directory of the project called `.env` and write in it `TOKEN=your_token_goes_here`
 
 **2** set your prefix in `utils/config.json`
 
-**3** run `npm install` then `npm run start` in your terminal if it's your first time using the bot, if not, just run `npm run start`
+**3** run `npm install` then `npm run start` in your terminal
+
+**4** next time you want to start the bot just run `npm run start`
 
 ## HOW TO ADD NEW COMMANDS?
 
