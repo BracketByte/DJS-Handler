@@ -9,15 +9,19 @@ with useful features.
 
 **!** Make sure that you have Node.js and NPM installed and up to to date on your system
 
+## HOW DO I START THE BOT FOR THE FIRST TIME?
+
+**1** If you'r hosting the bot on your loca machine create a new file in the root of the directory of the project called `.env` and write in it `TOKEN=your_token_goes_here` if not, add the token to your bot environtment variables with the name of `TOKEN`
+
+**2** Set your prefix in `utils/config.json`
+
+**3** Run `npm install` then `npm run start` in your terminal
+
 ## HOW DO I START THE BOT?
 
-**1** Create a new file in the root of the directory of the project called `.env` and write in it `TOKEN=your_token_goes_here`
+**!** If it's not your first time running this bot, run `npm run start` in your terminal
 
-**2** set your prefix in `utils/config.json`
-
-**3** run `npm install` then `npm run start` in your terminal
-
-**4** next time you want to start the bot just run `npm run start`
+**!** Use `npm run LocalStart` in your terminal if you'r running the bot on a local machine to make use of the .env file
 
 ## HOW TO ADD NEW COMMANDS?
 

@@ -4,7 +4,8 @@
   "description": "A easy to use command/event handler for discord.js",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "LocalStart":"node -r dotenv/config index.js"
   },
   "author": "BracketByte",
   "license": "ISC",
