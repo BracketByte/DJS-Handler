@@ -10,7 +10,7 @@ module.exports = (err, files, client) => {
 		if (commandCheck(command.name, command)) {
 			if (command.name) {
 				client.commands.set(command.name, command);
-				table.addRow(file.slice(0, -3), '✔');
+				table.addRow(command.name, '✔');
 				if (command.aliases && Array.isArray(command)) {
 					command.aliases.foreach((alias) =>
 						client.aliases.set(alias, command.name),
@@ -18,7 +18,7 @@ module.exports = (err, files, client) => {
 				}
 			}
 			else {
-				table.addRow(file.slice(0, -3), '✖');
+				table.addRow(command.name, '✖');
 			}
 		}
 		if (index == (files.length - 1)) console.log(table.toString());
