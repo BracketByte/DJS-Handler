@@ -15,6 +15,8 @@ with useful features.
 
 **!** Set your prefix in `utils/config.json`
 
+**!** Run `npm install` in your terminal
+
 ## HOW DO I START THE BOT?
 
 **!** If it's not your first time running this bot, run `npm run start` in your terminal
