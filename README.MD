@@ -9,13 +9,11 @@ with useful features.
 
 **!** Make sure that you have Node.js and NPM installed and up to to date on your system
 
-## HOW DO I START THE BOT FOR THE FIRST TIME?
+## HOW DO I SETUP MY BOT?
 
-**1** If you'r hosting the bot on your loca machine create a new file in the root of the directory of the project called `.env` and write in it `TOKEN=your_token_goes_here` if not, add the token to your bot environtment variables with the name of `TOKEN`
+**!** If you'r hosting the bot on your loca machine create a new file in the root of the directory of the project called `.env` and write in it `TOKEN=your_token_goes_here` if not, add the token to your bot environtment variables with the name of `TOKEN`
 
-**2** Set your prefix in `utils/config.json`
-
-**3** Run `npm install` then `npm run start` in your terminal
+**!** Set your prefix in `utils/config.json`
 
 ## HOW DO I START THE BOT?
 
@@ -25,9 +23,9 @@ with useful features.
 
 ## HOW TO ADD NEW COMMANDS?
 
-**1:** Create a new .js file in the commands folder with the name of your command.
+**1** Create a new .js file in the commands folder with the name of your command.
 
-**2:** Populate the file with the code reprezented here:
+**2** Populate the file with the code reprezented here:
 
 ```js
 module.exports = {
@@ -43,4 +41,4 @@ module.exports = {
 };
 ```
 
-**3:** start your bot and see if it works!
+**3** start your bot and see if it works!
