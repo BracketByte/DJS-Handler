@@ -1,7 +1,7 @@
 {
-    "prefix": "!",
-    "colors": {
-        "default": "606C65",
-        "error": "FF4500"
-    }
+	"prefix": "!",
+	"colors": {
+		"default": "606C65",
+		"error": "FF4500"
+	}
 }

@@ -13,14 +13,13 @@ module.exports = (err, files, client) => {
 				table.addRow(command.name, '✔');
 				if (command.aliases && Array.isArray(command)) {
 					command.aliases.foreach((alias) =>
-						client.aliases.set(alias, command.name),
+						client.aliases.set(alias, command.name)
 					);
 				}
-			}
-			else {
+			} else {
 				table.addRow(command.name, '✖');
 			}
 		}
-		if (index == (files.length - 1)) console.log(table.toString());
+		if (index == files.length - 1) console.log(table.toString());
 	});
 };
