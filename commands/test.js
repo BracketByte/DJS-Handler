@@ -1,11 +1,12 @@
 module.exports = {
-	name: 'test',
-	description: 'Just a test command',
-	aliases: [],
+	name: "test",
+	description: "Just a test command",
+	aliases: [""],
+	usage: "[command args]",
 	guildOnly: false,
 	args: false,
-	usage: '',
-	execute:(message, args, client) => {
-		message.reply('this is the test command');
+	permissions: {},
+	execute: (message, args, client) => {
+		message.reply("this is the test command");
 	},
 };

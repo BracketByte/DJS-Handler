@@ -31,12 +31,17 @@ with useful features.
 
 ```js
 module.exports = {
-	name: 'commanad name',
-	description: 'description of your command',
-	aliases: ['aleas1', 'alias2'],
+	name: "commanad name",
+	description: "description of your command",
+	aliases: ["aleas1", "alias2"],
 	guildOnly: false, //true if only used in server
 	args: false, //true if the command cant run without arguments
-	usage: '[argument1] [argument2]',
+	usage: "[argument1] [argument2]",
+	permissions: {
+		//this part can be left empty
+		bot: ["bot_permission", "another_bot_permission"], //add permissions the bot needs to run the command
+		user: ["user_permission"], //add permissions that the user needs to run the command
+	},
 	execute: async (message, args, client) => {
 		//code for the command goes here
 	},
