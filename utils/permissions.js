@@ -55,7 +55,7 @@ let botPermissionCheck = async (sendChannel, user, bot, perms, commandName) => {
 			returnMsg = `This bot requires access to display embeds in order to function properly! It also requires ${result.bot.unavailablePerms.map(
 				(perm) => (perm != 'EMBED_LINKS' ? `\`${perm}\`` : null)
 			)} for this specific command. Set the specific permissions and try again`;
-			sendChannel.send(returnMsg);
+			sendChannel.send({ content: returnMsg });
 			return false;
 		} else {
 			returnMsg = await new MessageEmbed()
