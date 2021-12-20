@@ -11,7 +11,7 @@ with useful features.
 
 ## HOW DO I SETUP MY BOT?
 
-**!** Paste your token in `utils/config.json`
+**!** If you'r hosting the bot on your loca machine create a new file in the root of the directory of the project called `.env` and write in it `TOKEN=your_token_goes_here` if not, add the token to your bot environtment variables with the name of `TOKEN`
 
 **!** Set your prefix in `utils/config.json`
 

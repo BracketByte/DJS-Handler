@@ -1,7 +1,9 @@
 const fs = require('fs');
 
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const client = new Discord.Client({ intents: ['GUILDS', "GUILD_MESSAGES"] });
+
+const config = require('./utils/config.json')
 
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
@@ -15,4 +17,4 @@ fs.readdir('./commands/', (err, files) => {
 	commandHandler(err, files, client);
 });
 
-client.login(process.env.TOKEN);
+client.login(config.token);
