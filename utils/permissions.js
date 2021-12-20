@@ -15,7 +15,7 @@ let commandHasPermissions = (user, bot, permsObj) => {
 			perms.forEach((permission) => {
 				if (!permissionsList.includes(permission)) {
 					result[userType].faultyPerms.push(permission);
-				} else if (!user.hasPermission(permission)) {
+				} else if (!message.member.permissions.has(permission)) {
 					result[userType].unavailablePerms.push(permission);
 				}
 			});
@@ -74,7 +74,7 @@ let botPermissionCheck = async (sendChannel, user, bot, perms, commandName) => {
 					result.user.unavailablePerms.join(' | ')
 				);
 			}
-			sendChannel.send(returnMsg);
+			sendChannel.send({ content:`<@${message.channel.id}>`, embeds: [returnMsg] });
 			return false;
 		}
 		return false;
