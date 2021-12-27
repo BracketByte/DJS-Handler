@@ -1,4 +1,3 @@
-/* eslint-disable no-prototype-builtins */
 const checkCommandModule = (cmdName, cmdModule) => {
 	if(!cmdModule.hasOwnProperty('execute')) {throw new Error(`${cmdName} command module does not have property 'execute'`);}
 	if(!cmdModule.hasOwnProperty('description')) {throw new Error(`${cmdName} command module does not have property 'description`);}
