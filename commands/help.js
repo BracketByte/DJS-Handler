@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const { prefix, colors } = require("./../utils/config.json");
 const embedColor = colors.default;
+const embedError = colors.error;
 
 module.exports = {
   name: "help",
@@ -28,7 +29,9 @@ module.exports = {
             )}\`\nYou can use \`${prefix}help {command name}\` to get info about a specific command!`
         )
         .setColor(embedColor);
-      return message.channel.send(cmdHelpEmbed);
+      return message.channel.send({
+        embeds: [cmdHelpEmbed],
+      });
     }
 
     const name = args[0].toLowerCase();
@@ -37,7 +40,20 @@ module.exports = {
       commands.find((cmd) => cmd.aliases && cmd.aliases.includes(name));
 
     if (!command) {
-      return message.reply("This command does not exist!");
+      const cmdDoesntExist = new Discord.MessageEmbed()
+        .setTitle("Command not found!")
+        .setDescription(
+          'Command "' +
+            message.args[0] +
+            "\" doesn't exist!\nUse `" +
+            prefix +
+            "help` for list of all commands."
+        )
+        .setColor(embedError);
+      return message.channel.send({
+        content: `<@${message.author.id}>`,
+        embeds: [cmdDoesntExist],
+      });
     }
     const cmdHelpEmbed = new Discord.MessageEmbed()
       .setTitle(`${command.name} | Command info`)
@@ -53,6 +69,6 @@ module.exports = {
       );
     }
 
-    return message.channel.send(cmdHelpEmbed);
+    return message.channel.send({ embeds: [cmdHelpEmbed] });
   },
 };
