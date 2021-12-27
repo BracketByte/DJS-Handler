@@ -51,7 +51,6 @@ module.exports = {
         )
         .setColor(embedError);
       return message.channel.send({
-        content: `<@${message.author.id}>`,
         embeds: [cmdDoesntExist],
       });
     }
