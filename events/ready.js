@@ -5,9 +5,7 @@ module.exports = {
   event: "ready",
   once: true,
   run(client) {
-    const rest = new REST({ version: "9" }).setToken(
-      "OTExMTMxMzIwMDExMzM3NzI4.YZc7Kg.zsyprVrfCdJk6SY4HRaKDVkXs1E"
-    );
+    const rest = new REST({ version: "9" }).setToken(process.env.TOKEN);
     if (client.commandList)
       (async () => {
         try {
